@@ -15,7 +15,7 @@ To install this module type the following:
 DEPENDENCIES
 
  - URI::Fetch
- - Cache::File
+ - Cache::FileCache
 
 
 COPYRIGHT AND LICENCE

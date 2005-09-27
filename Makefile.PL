@@ -1,12 +1,9 @@
-use 5.008005;
 use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
 WriteMakefile(
     NAME              => 'URI::Fetch::SimpleCache',
-    VERSION_FROM      => 'lib/URI/Fetch/SimpleCache.pm', # finds $VERSION
-    PREREQ_PM         => {}, # e.g., Module::Name => 1.1
-    ($] >= 5.005 ?     ## Add these new keywords supported since 5.005
-      (ABSTRACT_FROM  => 'lib/URI/Fetch/SimpleCache.pm', # retrieve abstract from module
-       AUTHOR         => 'A. U. Thor <iwsm@nonet>') : ()),
+    VERSION_FROM      => 'lib/URI/Fetch/SimpleCache.pm',
+    PREREQ_PM         => {
+        'URI::Fetch'       => 0,
+        'Cache::FileCache' => 0,
+    },
 );
